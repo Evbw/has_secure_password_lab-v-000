@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :require_login
-  skip_before_action :require_login, only: [:new, :create]
 
   def new
   end
@@ -19,5 +18,6 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :password, :password_confirmation)
+    end
 
 end
