@@ -12,3 +12,4 @@ class SessionsController < ApplicationController
       redirect to login_path
     end
   end
+end
